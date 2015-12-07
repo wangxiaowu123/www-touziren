@@ -1,0 +1,66 @@
+<ion-view view-title="持有中的产品">
+  <ion-content class="bg-green">
+    <div class="row" style="background-color:#fff; text-align:center;">
+      <div class="col index-info-box">
+        <div class="title">东胜投资集合资金信托计划0001</div>
+        <div class="type">预期年化收益率</div>
+        <div class="yields">8.80% ~ 9.50%</div>
+        <div class="other">购买日期：2015年1月1日</div>
+        <div class="safety">持有金额：100万元</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="tab" ng-click="tabs(1)" ng-class="{'action':tab[0]}">
+        产品收益
+      </div>
+      <div class="tab" ng-click="tabs(2)" ng-class="{'action':tab[1]}">
+        安全性跟踪报告
+      </div>
+      <div class="tab" ng-click="tabs(3)" ng-class="{'action':tab[2]}">
+        变现贴现费率
+      </div>
+    </div>
+
+    <div class="" style="background-color:#fff; margin-top:-5px;">
+      <div class="t1 act"  ng-if="tab[0]">
+
+        <h3 style="font-size:16px; color:#C19E67; padding-top:15px; margin:0 auto; background-color:#fff; text-align:center;"></h3>
+
+
+
+        <i class="iconfont icon-quanweirenzhengc" style="font-size:32px; color:#C19E67; float:left; width:40px; height:100px; margin-left:20px;"></i>
+        <div class="" style="font-size:12px; color:#507E81; margin-right:20px;">
+          按照信托合同的约定，本报告期间信托收益暂不分配。信托计划自成立日起每1年向受益人进行一次收益分配，预期收益率为 9.5%/年。本公司预计于 2011年12月9日之后的5个工作日内向受益人进行第1次收益分配。
+        </div>
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="t2"  ng-if="tab[1]">
+        <div class="row">
+          <div class="col sentiment-list">
+            <ul ng-click="showNews()">
+              <li>安全性跟踪报告标题安全性跟踪报告标题<span class="date">15-07-12</span></li>
+              <li>安全性跟踪报告标题安全性跟踪报告标题<span class="date">15-07-12</span></li>
+              <li>安全性跟踪报告标题安全性跟踪报告标题<span class="date">15-07-12</span></li>
+              <li>安全性跟踪报告标题安全性跟踪报告标题<span class="date">15-07-12</span></li>
+              <li>安全性跟踪报告标题安全性跟踪报告标题<span class="date">15-07-12</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="t3"  ng-if="tab[2]">
+        <div class="row">
+          <div class="col" style="padding:10px;">
+            暂无内容
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

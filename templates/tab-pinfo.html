@@ -1,0 +1,121 @@
+<ion-view view-title="产品详情" hide-tabs="true">
+  <ion-content class="bg-green">
+    <div class="row" style="padding-top:20px;">
+      <div class="col">
+        <div class="p_profit_box">
+          <div class="p_profit">8.5%</div>
+          <div class="p_type">预期年化收益率</div>
+        </div>
+        <div class="p_title">神华保理1号集合资金信托计划</div>
+        <div class="p_deadline">234天</div>
+        <div class="p_transferable" ng-if=" 2 == 2 ">可转让</div>
+        <div class="p_progress_box">
+          <div class="p_progress" style="width:50%;"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="list" style="margin-bottom: 0px;">
+      <div class="item item-input-inset" style="background-color:transparent; border:0px;">
+        <label class="item-input-wrapper" style="background-color:#fff; padding:10px; border:1px solid #DCE5E6; color:#507E81;">
+          <input type="text" placeholder="请输入预约金额" style="width:100%;">元
+        </label>
+        <button class="button button-small" style="border:0px;background-color:#507E81; color:#fff; padding:10px; font-size:14px;"> 立即预约 </button>
+      </div>
+      <div class="row" style="padding: 0px 10px 10px 10px; color:#507E81;">
+        规模: 1亿元    已约: 1.2亿元    预计成立日期：15-10-10
+      </div>
+    </div>
+    <!-- banner促销 -->
+     <ion-slide-box class="Hbanner">
+      <ion-slide ng-repeat="benner in products.banner">
+        <div class="home-banner">
+          <img ng-src="{{benner.bannerImg}}" alt="{{benner.bannerTitle}}" />
+        </div>
+      </ion-slide>
+    </ion-slide-box> 
+
+      <ion-list>
+        <ion-item type="item-text-wrap" class="item-icon-right" href="#/tab/home/pindex">
+          产品指数
+          <span class="badge badge-assertive">92分</span>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          认购门槛
+          <span>1100 <= E1 <= 300</span>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          期限
+          <span>24 个月</span>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          预期年化收益率 ( 100万 )
+          <span>8.2%</span>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          预期年化收益率 ( 300万 )
+          <span>8.8%</span>
+        </ion-item>
+      </ion-list>
+
+      <div class="item item-divider bg-transparent">
+        基本信息
+      </div>
+
+      <ion-list>
+        <ion-item type="item-text-wrap">
+          信托规模
+          <span>1 亿元</span>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          起投金额
+          <span>100 万元</span>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          产品期限
+          <span>12个月满6个月可提前还款</span>
+        </ion-item>
+        <ion-item type="item-text-wrap">
+          收益分配
+          <span>从12月20日起，每季度付息</span>
+        </ion-item>
+      </ion-list>
+
+      <div class="item item-divider bg-transparent">
+        相关文档
+      </div>
+
+      <ion-list>
+        <ion-item type="item-text-wrap" class="item-icon-right">
+          信托合同
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+        <ion-item type="item-text-wrap" class="item-icon-right">
+          信托计划书
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+        <ion-item type="item-text-wrap" class="item-icon-right" ng-click="openH5()">
+          H5产品信息说明书
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+      </ion-list>
+
+      <div class="consultant-box">
+        <div class="consultant-info">
+          <img src="img/icon-user-01.png" ng-click="showAlert()"/>
+          <div>信托经理留言板</div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item " style="background-color:transparent; border:0px;">
+          <textarea name="name" rows="8" style="padding:15px;width:100%;" placeholder="请写下您的留言"></textarea>
+          <button ng-click="submitMessage()" class="button button-block" style="border:0px;background-color:#507E81; color:#fff; font-size:16px;"> 提交留言 </button>
+        </div>
+      </div>
+
+
+
+  </ion-content>
+</ion-view>

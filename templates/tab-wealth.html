@@ -1,0 +1,88 @@
+<ion-view view-title="我的财富">
+
+  <ion-content class="bg-green">
+
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div class="row user-info-box">
+      <div class="col">
+        <div class="user-icon">
+          <img src="img/icon-user-01.png" alt="" />
+          <div class="user-name">
+            张林 先生
+          </div>
+        </div>
+      </div>
+      <div class="col" style="margin-top:20px;">
+        个人信息完整度
+        <div class="p_progress_box" style="margin-left:0px;">
+          <div class="p_progress" style="width:50%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-wealth-box" style="text-align:center; ">
+      <div class="col">
+        <span>我的资产</span>
+        <h1>{{1800000  | currency:'￥'}}</h1>
+      </div>
+    </div>
+
+    <div class="item item-divider bg-transparent">
+      我的财富工具箱
+    </div>
+
+    <div class="row my-wealth-tools">
+      <div class="col" ng-click="myWealthList(1)">
+        <i class="iconfont icon-qiandaier s1"></i>
+        <div>持有中产品</div>
+      </div>
+      <div class="col" ng-click="myWealthList(2)">
+        <i class="iconfont icon-wodezijin s2"></i>
+        <div>可变现产品</div>
+      </div>
+      <div class="col" ng-click="myWealthList(3)">
+        <i class="iconfont icon-qiandai s3"></i>
+        <div>历史产品</div>
+      </div>
+      <div class="col" ng-click="myWealthList(4)">
+        <i class="iconfont icon-dianhua s4"></i>
+        <div>我的预约</div>
+      </div>
+    </div>
+
+    <div class="row my-wealth-tools">
+      <div class="col">
+        <i class="iconfont icon-xinwen s5"></i>
+        <div>我喜欢的</div>
+      </div>
+      <div class="col" ng-click="myGiftPack()">
+        <i class="iconfont icon-pinpaizhuanxiang s6"></i>
+        <div>我的礼包</div>
+      </div>
+      <div class="col" ng-click="showShare()">
+        <i class="iconfont icon-yaoqing s7"></i>
+        <div>邀请朋友</div>
+      </div>
+      <div class="col">
+        <i class="iconfont icon-demo24 s8"></i>
+        <div>我的理财师</div>
+      </div>
+    </div>
+
+    <div class="item item-divider bg-transparent">
+      私行增值服务
+    </div>
+
+    <ion-list>
+      <ion-item type="item-text-wrap" class="item-icon-right"  ng-click="myWealthList(2)">
+        申请信托产品变现
+        <span>进入信托产品变现中心</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

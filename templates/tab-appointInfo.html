@@ -1,0 +1,113 @@
+<ion-view view-title="产品详情">
+  <ion-nav-buttons side="right">
+    <i style="line-height:35px;">编辑</i>
+  </ion-nav-buttons>
+  <ion-content class="bg-green">
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+
+    <div class="appoint-info">
+      <div class="p_profit_box">
+        <div class="p_profit">7.8%</div>
+        <div class="p_type">预期年化收益率</div>
+      </div>
+      <div class="app-title">
+        <div class="p_title">东胜投资集合资金信托计划</div>
+        <div class="p_transferable">可转让</div>
+      </div>
+      <div class="app-day">
+        <div class="p_deadline">365天</div>
+        <div class="p_progress_box">
+          <div class="p_progress" style="width:40%;"></div>
+        </div>
+        <span style="display:inline-block; width:12%; float:left;">40%</span>
+      </div>
+      <div class="app-now">
+        <input class="app-input" type="text" name="appnum" value="请输入预约金额">
+        <input class="app-submit bg-green" type="button" name="nowapp" value="立即预约">
+      </div>
+      <div class="font-green font-10">
+        <span>规模：1亿元</span><span>已约：1.2亿元</span><span>预计成立日期：15-10-10</span>
+      </div>
+    </div>
+
+    <div class="bg-white">
+      <div class="row row-center bor-top bor-bottom">
+        <a href="##" class="col col-offset-10 w_assets_tabs bor-right w_assets_active">E1 类型</a>
+        <a href="##" class="col col-offset-10 w_assets_tabs font-green">E2 类型</a>
+      </div>
+      <div class="app-amount">
+        <span class="font-green">认购金额（万元）</span>
+        <span class="font-orange t-right">100<=E1<=300</span>
+      </div>
+      <div class="app-amount bor-bottom">
+        <span class="font-green">期限</span>
+        <span class="font-orange t-right">12个月</span>
+      </div>
+      <div class="app-amount">
+        <span class="font-green">预期年化收益</span>
+        <span class="font-orange t-right">9.1%</span>
+      </div>
+    </div>
+
+    <div class="item item-divider bg-transparent">
+      基本信息
+    </div>
+    <div class="app-basicinfo bg-white">
+      <div class="app-amount">
+        <div class="app-amounts bor-right">
+          <span class="font-green">信托规模</span>
+          <span class="font-orange t-right">1亿元</span>
+        </div>
+        <div class="app-amounts">
+          <span class="font-green">&nbsp;&nbsp;&nbsp;起投金额</span>
+          <span class="font-orange">100万元</span>
+        </div>
+      </div>
+      <div class="app-amount bor-bottom">
+        <span class="font-green">产品期限</span>
+        <span class="font-orange t-right">12个月满6个月可提前还款</span>
+      </div>
+      <div class="app-amount">
+        <span class="font-green">收益分配</span>
+        <span class="font-orange t-right">从12月20日起，每季度付息</span>
+      </div>
+    </div>
+
+    <div class="item item-divider bg-transparent">
+      相关文档
+    </div>
+
+    <ion-list>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        相关指数
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        查看信托合同
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        查看信托计划书
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        产品信息说明书（信息化设计H5）
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+    <div class="user-icon-01">
+      <img src="img/icon-user-01.png" alt="" />
+      <div class="name">信托经理留言板</div>
+    </div>
+
+    <label class="item">
+      <textarea class="form-control" rows="5" style="width:100%" placeholder="请写下您的留言"></textarea>
+      <button class="button button-block" type="submit" style="background-color:#507E81; border-color:#507E81; color:#fff;">提交留言</button>
+    </label>
+  </ion-content>
+</ion-view>

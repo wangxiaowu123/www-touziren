@@ -1,0 +1,30 @@
+<ion-view view-title="存续期产品" hide-tabs="true">
+  <ion-content class="bg-green">
+
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="item item-divider bg-transparent">
+      热销产品
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="p in products.durationProduct" class="bg-transparent item-icon-right" type="item-text-wrap" href="#/tab/invest/durationInfo">
+        <div class="p_profit_box" style="margin-top:13px;">
+          <div class="p_profit">{{ p.productYield}}%</div>
+          <div class="p_type">预期年化收益率</div>
+        </div>
+        <div class="p_title">{{ p.productName}}</div>
+        <div class="p_title" style="color:#9B9B9B;">产品成立日期：{{ p.creationDate | date:'yyyy-MM-dd'}}</div>
+        <div class="p_deadline">产品周期：36 / {{ p.productDeadline}}天</div>
+        <div class="p_progress_box">
+          <div class="p_progress" style="width:{{ p.productProgress}}%;"></div>
+        </div>
+        <div class="p_progress_txt"></div>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

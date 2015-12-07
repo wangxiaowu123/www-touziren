@@ -1,0 +1,251 @@
+<ion-view view-title="产品指数">
+  <ion-content class="bg-green">
+    <div class="row" style="background-color:#fff; text-align:center;">
+      <div class="col index-info-box">
+        <div class="title">东胜投资集合资金信托计划0001</div>
+        <div class="type">预期年化收益率</div>
+        <div class="yields">8.80% ~ 9.50%</div>
+        <div class="other">投资期限（月）24    |    认购门槛：100.00 万元</div>
+        <div class="safety"><i class="iconfont icon-baozhengjin2"></i> 可申请第三方安全兑付保障</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="tab" ng-click="tabs(1)" ng-class="{'action':tab[0]}">
+        产品指数
+      </div>
+      <div class="tab" ng-click="openH5()" ng-class="{'action':tab[1]}">
+        H5产品介绍
+      </div>
+      <div class="tab" ng-click="tabs(3)" ng-class="{'action':tab[2]}">
+        舆情分析
+      </div>
+    </div>
+
+    <div class="" style="background-color:#fff; margin-top:-5px;">
+      <div class="t1 act"  ng-if="tab[0]">
+
+        <h3 style="font-size:16px; color:#4E7E82; padding-top:15px; margin:0 auto; background-color:#fff; text-align:center;">产品综合得分</h3>
+
+        <div class="row">
+          <div class="col">
+            <echarts id="abc" option="option0" style="height:150px; width:160px; margin:0 auto;"></echarts>
+          </div>
+
+          <!-- <div class="col">
+            <div class="" style="padding:5px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; height:20px; line-height:20px;">
+                安全性
+              </div>
+              <div class="p_progress_box" style="margin:5px 0px 5px 50px;">
+                <div class="p_progress" style="width:70%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; margin-top:5px;">
+                流动性
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 5px 50px;">
+                <div class="p_progress" style="width:15%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; height:30px; line-height:30px;">
+                收益性
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 15px 50px;">
+                <div class="p_progress" style="width:85%;"></div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <i class="iconfont icon-quanweirenzhengc" style="font-size:32px; color:#C19E67; float:left; width:40px; margin-left:20px;"></i>
+        <div class="" style="font-size:12px; color:#507E81; margin-right:20px;">
+          该产品总得分由安全性、流动性、收益性三个维度得分加权算法得出
+        </div>
+
+        <hr>
+
+        <h3 style="font-size:16px; color:#C19E67; padding-top:15px; margin:0 auto; background-color:#fff; text-align:center;">安全性得分 85分</h3>
+
+        <div class="row">
+          <div class="col">
+            <!-- <div id="aaa" style="height:160px; width:160px;" echarts="option"></div> -->
+            <echarts id="aaa" option="option" style="height:160px; width:160px;"></echarts>
+          </div>
+          <div class="col">
+
+            <div class="" style="padding:0px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; height:20px; line-height:20px;">
+                发行机构
+              </div>
+              <div class="p_progress_box" style="margin:5px 0px 5px 60px;">
+                <div class="p_progress" style="width:85%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; margin-top:5px;">
+                交易对手
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 5px 60px;">
+                <div class="p_progress" style="width:60%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; margin-top:5px;">
+                行业
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 5px 60px;">
+                <div class="p_progress" style="width:87%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; margin-top:5px;">
+                担保
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 5px 60px;">
+                <div class="p_progress" style="width:70%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; height:30px; line-height:30px;">
+                涉诉情况
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 15px 60px;">
+                <div class="p_progress" style="width:89%;"></div>
+              </div>
+            </div>
+
+            <div class="">
+              <a class="button button-block button-small" type="submit" style="background-color:#507E81; border-color:#507E81; color:#fff;" ng-click="showAlert1()">查看专家点评</a>
+            </div>
+
+          </div>
+        </div>
+
+        <i class="iconfont icon-quanweirenzhengc" style="font-size:32px; color:#C19E67; float:left; width:40px; margin-left:20px;"></i>
+        <div class="" style="font-size:12px; color:#507E81; margin-right:20px;">
+          本产品经宾果金融科技研究院专家机构推荐为安全高安全等级信托产品。
+        </div>
+
+
+        <hr>
+        <h3 style="font-size:16px; color:#C19E67; padding-top:15px; margin:0 auto; background-color:#fff; text-align:center;">流动性得分 98分</h3>
+
+        <div class="row">
+
+          <div class="col">
+            <!-- <div id="aaa" style="height:160px; width:160px;" echarts="option1"></div> -->
+            <echarts id="bbb" option="option1" style="height:160px; width:160px;"></echarts>
+          </div>
+          <div class="col">
+
+            <div class="" style="padding:20px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; height:20px; line-height:20px;">
+                交易市场
+              </div>
+              <div class="p_progress_box" style="margin:5px 0px 5px 60px;">
+                <div class="p_progress" style="width:80%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; margin-top:5px;">
+                交易活跃度
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 5px 60px;">
+                <div class="p_progress" style="width:75%;"></div>
+              </div>
+            </div>
+
+            <div class="" style="padding:1px 0px 0px 0px;">
+              <div class="" style="position:absolute; float:left; color:#A7BFC1; height:30px; line-height:30px;">
+                交易成本
+              </div>
+              <div class="p_progress_box" style="margin:10px 0px 15px 60px;">
+                <div class="p_progress" style="width:85%;"></div>
+              </div>
+            </div>
+
+            <div class="">
+              <a class="button button-block button-small" type="submit" style="background-color:#507E81; border-color:#507E81; color:#fff;" ng-click="showAlert2()">可交易市场列表</a>
+            </div>
+          </div>
+        </div>
+
+        <i class="iconfont icon-quanweirenzhengc" style="font-size:32px; color:#C19E67; float:left; width:40px; margin-left:20px;"></i>
+        <div class="" style="font-size:12px; color:#507E81; margin-right:20px;">
+          该产品被安徽省金融资产交易所识别为安全等级AA+准入进入市场交易由做市商认购，具备强流动性
+        </div>
+
+        <hr>
+        <h3 style="font-size:16px; color:#C19E67; padding-top:15px; margin:0 auto; background-color:#fff; text-align:center;">收益性得分 80分</h3>
+
+        <div class="row">
+          <!-- <div id="aaa" style="height:240px; width:100%;" echarts="option2"></div> -->
+          <echarts id="ccc" option="option2" style="height:240px; width:100%;"></echarts>
+        </div>
+
+        <i class="iconfont icon-quanweirenzhengc" style="font-size:32px; color:#C19E67; float:left; width:40px; margin-left:20px;"></i>
+        <div class="" style="font-size:12px; color:#507E81; margin-right:20px; margin-top:5px;">
+          本产品收益指数得分超过了市场中83%的产品收益
+        </div>
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="t2"  ng-if="tab[1]">
+        H5
+      </div>
+
+      <div class="t3"  ng-if="tab[2]">
+        <div class="row">
+          <div class="col">
+            <div class="sentiment-box" style="background-color:#27AE60; margin:10px;">
+              <div class="sentiment-line" style="width:81%; float:left; height:30px; line-height:30px; background-color:#E54F46; color:#fff; text-align:center;">
+                81%
+              </div>
+              <div class="sentiment-line" style="width:19%; float:left; height:30px; line-height:30px; background-color:#27AE60; color:#fff; text-align:center;">
+                19%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="color:#C49D66;">
+          <div class="col" style="padding:0px 15px 15px 15px; text-align:right;">
+            <span class="sentiment-red"></span>正向指数
+          </div>
+          <div class="col" style="padding:0px 15px 15px 15px;">
+            <span class="sentiment-green"></span>负向指数
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col sentiment-list" ng-click="showNews()">
+            <ul>
+              <li><span class="sentiment-green"></span> 多层次资本市场给信托业带来重大机遇<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-red"></span> 关于信托投资门槛你了解多少<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-green"></span> 多层次资本市场给信托业带来重大机遇<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-red"></span> 关于信托投资门槛你了解多少<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-green"></span> 多层次资本市场给信托业带来重大机遇<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-red"></span> 关于信托投资门槛你了解多少<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-green"></span> 多层次资本市场给信托业带来重大机遇<span class="date">15-07-12</span></li>
+              <li><span class="sentiment-red"></span> 关于信托投资门槛你了解多少<span class="date">15-07-12</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

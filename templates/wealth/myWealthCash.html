@@ -1,0 +1,45 @@
+<ion-view view-title="产品变现">
+  <ion-content class="bg-green">
+    <div class="row" style="background-color:#fff; text-align:center;">
+      <div class="col index-info-box">
+        <div class="title">东胜投资集合资金信托计划0001</div>
+        <div class="type">预期年化收益率</div>
+        <div class="yields">9.50%</div>
+        <div class="other">购买日期：2015年1月1日</div>
+        <div class="safety">持有金额：100万元</div>
+      </div>
+    </div>
+
+    <div class="item item-divider bg-transparent">
+      变现信息
+    </div>
+
+    <ion-list>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        变现利率
+        <span>9.5%</span>
+      </ion-item>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        实际到账金额
+        <span>{{980000 | currency:"￥"}}</span>
+      </ion-item>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        变现服务费率
+        <span>2%</span>
+      </ion-item>
+      <ion-item type="item-text-wrap" class="item-icon-right">
+        变现服务费金额
+        <span>{{20000 | currency:"￥"}}</span>
+      </ion-item>
+    </ion-list>
+
+    <div class="row">
+      <div class="col">
+        <a class="button button-block" style="border:0px;background-color:#507E81; color:#fff; font-size:16px;" href="#/tab/wealth/myWealthCashing"> 确认提交变现申请 </a>
+        <span style="color:#4A90E2;">我同意：《xxx协议》《xxx承诺函》《xxx投保协议》</span>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

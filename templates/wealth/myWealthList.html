@@ -1,0 +1,127 @@
+<ion-view view-title="我的产品" hide-tabs="true">
+  <ion-content class="bg-green">
+
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+
+    <div class="row user-info-box">
+      <div class="col">
+        <div class="user-icon">
+          <img src="img/icon-user-01.png" alt="" />
+          <div class="user-name">
+            张林 先生
+          </div>
+        </div>
+      </div>
+      <div class="col" style="margin-top:20px;">
+        个人信息完整度
+        <div class="p_progress_box" style="margin-left:0px;">
+          <div class="p_progress" style="width:50%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-wealth-box" style="text-align:center; ">
+      <div class="col">
+        <span>我的资产</span>
+        <h1>{{1800000  | currency:'￥'}}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="tab" ng-click="tabs('1')" ng-class="{'action':tab[0]}">
+        持有中
+      </div>
+      <div class="tab" ng-click="tabs('2')" ng-class="{'action':tab[1]}">
+        可变现
+      </div>
+      <div class="tab" ng-click="tabs('3')" ng-class="{'action':tab[2]}">
+        历史产品
+      </div>
+      <div class="tab" ng-click="tabs('4')" ng-class="{'action':tab[3]}">
+        我的预约
+      </div>
+    </div>
+
+    <div class="" style="background-color:#fff; margin-top:-5px;">
+      <div class="t1 act"  ng-if="tab[0]">
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
+        <ion-list>
+          <ion-item ng-repeat="p in products.myProduct | filter:{historyProducts:false}" class="bg-transparent item-icon-right" type="item-text-wrap" href="#/tab/wealth/myWealthInfo">
+            <div class="p_title" style="margin-left:0px;">{{ p.productName}}</div>
+            <div class="p_deadline">{{ p.productDeadline}}天</div>
+            <div class="p_transferable" ng-if=" p.productIftransferable == 2 ">可转让</div>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <div class="" style="float:right; margin:-10px; font-size:12px; color:#C19E67;">
+              {{p.holdShare/10000 | currency:'￥'}} 万元
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="t2"  ng-if="tab[1]">
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
+        <ion-list>
+          <ion-item ng-repeat="p in products.myProduct | filter:{productIftransferable:'2'}" class="bg-transparent item-icon-right" type="item-text-wrap" href="#/tab/wealth/myWealthCash">
+            <div class="p_title" style="margin-left:0px;">{{ p.productName}}</div>
+            <div class="p_deadline">{{ p.productDeadline}}天</div>
+            <div class="p_transferable" ng-if=" p.productIftransferable == 2 ">可转让</div>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <div class="" style="float:right; margin:-10px;">
+              申请变现
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="t3"  ng-if="tab[2]">
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
+        <ion-list>
+          <ion-item ng-repeat="p in products.myProduct | filter:{historyProducts:true}" class="bg-transparent item-icon-right" type="item-text-wrap">
+            <div class="p_title" style="margin-left:0px;">{{ p.productName}}</div>
+            <div class="p_deadline">{{ p.productDeadline}}天</div>
+            <div class="p_transferable" ng-if=" p.productIftransferable == 2 ">可转让</div>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <div class="" style="float:right; margin:-10px; font-size:12px; color:#C19E67;">
+              {{1000000 | currency:'￥'}}
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="t4"  ng-if="tab[3]">
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
+        <ion-list>
+          <ion-item ng-repeat="p in products.reservationProduct" class="bg-transparent item-icon-right" type="item-text-wrap">
+            <div class="p_title" style="margin-left:0px;">{{ p.productName}}</div>
+            <div class="p_deadline">{{ p.productDeadline}}天</div>
+            <div class="p_transferable" ng-if=" p.productIftransferable == 2 ">可转让</div>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <div class="" style="float:right; margin:-10px; font-size:12px; color:#C19E67;">
+              {{1000000 | currency:'￥'}}
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

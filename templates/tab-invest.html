@@ -1,0 +1,51 @@
+<ion-view view-title="投资">
+
+  <ion-content class="bg-green">
+
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-slide-box>
+      <ion-slide ng-repeat="benner in products.banner">
+        <div class="home-banner">
+          <img ng-src="{{benner.bannerImg}}" alt="{{benner.bannerTitle}}" />
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <div class="item item-divider bg-transparent">
+      热销产品
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="p in products.product" class="bg-transparent" type="item-text-wrap" href="#/tab/invest/pinfo">
+        <div class="p_profit_box">
+          <div class="p_profit">{{ p.productYield}}%</div>
+          <div class="p_type">预期年化收益率</div>
+        </div>
+        <div class="p_title">{{ p.productName}}</div>
+        <div class="p_deadline">{{ p.productDeadline}}天</div>
+        <div class="p_transferable" ng-if=" p.productIftransferable == 2 ">可转让</div>
+        <div class="p_progress_box">
+          <div class="p_progress" style="width:{{ p.productProgress}}%;"></div>
+        </div>
+        <div class="p_progress_txt">{{ p.productProgress}}%</div>
+      </ion-item>
+    </ion-list>
+
+    <div class="item item-divider bg-transparent">
+      存续期产品
+    </div>
+
+    <ion-list>
+      <ion-item type="item-text-wrap" class="item-icon-right" href="#/tab/invest/durationList">
+        已成立产品列表
+        <span>这里是个副标题</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

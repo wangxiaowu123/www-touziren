@@ -1,0 +1,64 @@
+<ion-view view-title="渤海信托">
+  <ion-nav-buttons side="right">
+    <i style="line-height:35px;" ng-click="login()">免费注册/登陆</i>
+  </ion-nav-buttons>
+
+  <ion-content class="bg-green">
+
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-slide-box>
+      <ion-slide ng-repeat="benner in products.banner">
+        <div class="home-banner">
+          <img ng-src="{{benner.bannerImg}}" alt="{{benner.bannerTitle}}" />
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <div class="row home-bar">
+      <div class="col" ng-click="showMobileEx()">
+        <i class="iconfont icon-pinpaizhuanxiang1"></i>
+        <h5>手机专享</h5>
+        <small>手机下单享受15%福利！</small>
+      </div>
+      <a class="col" ng-click="showShare()">
+        <i class="iconfont icon-fenxiang"></i>
+        <h5>邀请好友</h5>
+        <small>成功邀请好友可获800元！</small>
+      </a>
+    </div>
+
+    <div class="item item-divider bg-transparent">
+      热销产品
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="p in products.product" class="bg-transparent home_profit" type="item-text-wrap" href="#/tab/home/pinfo">
+        <div class="title">{{ p.productName}}</div>
+        <div class="home_profit_box">
+          <div class="home_profit">{{ p.productYield}}%</div>
+          <div class="home_type">预期年化收益率</div>
+        </div>
+        <div class="row">
+          <div class="col bg-border-right">
+            <div class="font-gray">起投金额</div>
+            <div class="font-orange">100万</div>
+          </div>
+          <div class="col">
+            <div class="font-gray">投资期限</div>
+            <div class="font-orange">365天</div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div class="">
+      <img src="img/banner/banner04.png" style="width:100%; padding:0px; margin:0px;"/>
+      <img src="img/banner/banner05.png" style="width:100%"/>
+    </div>
+
+
+  </ion-content>
+</ion-view>
